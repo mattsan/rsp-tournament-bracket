@@ -48,7 +48,7 @@ DATA.each_with_index do |line, i|
   filename = 'tournament%02d' % i
   File.write("images/#{filename}.haml", to_svg(input, expected).join("\n"))
   `haml images/#{filename}.haml images/#{filename}.svg`
-  `convert -density 720 -font /Library/Fonts/Arial.ttf images/#{filename}.svg images/#{filename}.png`
+  `convert -density 144 -font /Library/Fonts/Arial.ttf images/#{filename}.svg images/#{filename}.png`
 end
 
 
